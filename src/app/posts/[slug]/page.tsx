@@ -77,7 +77,7 @@ export default function PostPage({ params }: PostPageProps) {
           </div>
           <article>
             <header className="mb-8">
-              <h1 className="text-4xl font-bold mb-4">文章标题示例</h1>
+              <h1 className="text-4xl font-bold mb-4">{params.slug}</h1>
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800" />
