@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -44,7 +45,7 @@ export default function Home() {
         {/* 博客文章网格布局 - 三列显示 */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* 博客文章卡片1 - Zeta预测功能 */}
-          <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+          <Link href="/posts/zed-predicts-next-edit" className="block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-w-16 aspect-h-9 bg-gray-100 p-4">
               <pre className="text-sm font-mono overflow-hidden">
                 {"// Example code"}
@@ -56,10 +57,10 @@ export default function Home() {
               <p className="text-gray-600 mb-4">A tool that anticipates your next move.</p>
               <p className="text-sm text-gray-500">Published on 02/13/2025</p>
             </div>
-          </div>
+          </Link>
 
           {/* 博客文章卡片2 - 主题功能 */}
-          <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+          <Link href="/posts/add-color-to-life" className="block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-w-16 aspect-h-9 bg-gray-100 p-4">
               <pre className="text-sm font-mono overflow-hidden">
                 {"// Theme preview"}
@@ -71,10 +72,10 @@ export default function Home() {
               <p className="text-gray-600 mb-4">You can now use icon themes to change the look.</p>
               <p className="text-sm text-gray-500">Published on 02/05/2025</p>
             </div>
-          </div>
+          </Link>
 
           {/* 博客文章卡片3 - DeepSeek集成 */}
-          <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+          <Link href="/posts/deepseek-r1-for-coding" className="block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-w-16 aspect-h-9 bg-gray-100 p-4">
               <pre className="text-sm font-mono overflow-hidden">
                 {"// DeepSeek integration"}
@@ -86,7 +87,7 @@ export default function Home() {
               <p className="text-gray-600 mb-4">Try it now in Zed.</p>
               <p className="text-sm text-gray-500">Published on 01/27/2025</p>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* 分类导航和文章列表区域 */}
@@ -116,7 +117,7 @@ export default function Home() {
           {/* 文章列表区域 */}
           <div className="flex-1 space-y-4">
             {/* 文章1 - 带有特色标签和多作者头像 */}
-            <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/posts/zed-predicts-next-edit" className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4">
                 {/* 作者头像组 */}
                 <div className="flex -space-x-2">
@@ -134,10 +135,10 @@ export default function Home() {
               <div className="text-right text-gray-500">
                 <span>02/13/2025</span>
               </div>
-            </div>
+            </Link>
 
             {/* 文章2 - 单作者文章 */}
-            <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/posts/add-color-to-life" className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4">
                 <div className="flex -space-x-2">
                   <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=3" alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
@@ -152,10 +153,10 @@ export default function Home() {
               <div className="text-right text-gray-500">
                 <span>02/05/2025</span>
               </div>
-            </div>
+            </Link>
 
             {/* 文章3 - 单作者文章 */}
-            <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+            <Link href="/posts/deepseek-r1-for-coding" className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4">
                 <div className="flex -space-x-2">
                   <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=4" alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
@@ -170,58 +171,7 @@ export default function Home() {
               <div className="text-right text-gray-500">
                 <span>01/27/2025</span>
               </div>
-            </div>
-
-            <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="flex items-center space-x-4">
-                <div className="flex -space-x-2">
-                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=4" alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold hover:text-blue-600">How is DeepSeek-R1 for Coding? Try it right now!</h3>
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <span>01/27/2025</span>
-                  </div>
-                </div>
-              </div>
-              <div className="text-right text-gray-500">
-                <span>01/27/2025</span>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="flex items-center space-x-4">
-                <div className="flex -space-x-2">
-                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=4" alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold hover:text-blue-600">How is DeepSeek-R1 for Coding? Try it right now!</h3>
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <span>01/27/2025</span>
-                  </div>
-                </div>
-              </div>
-              <div className="text-right text-gray-500">
-                <span>01/27/2025</span>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="flex items-center space-x-4">
-                <div className="flex -space-x-2">
-                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=4" alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold hover:text-blue-600">How is DeepSeek-R1 for Coding? Try it right now!</h3>
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <span>01/27/2025</span>
-                  </div>
-                </div>
-              </div>
-              <div className="text-right text-gray-500">
-                <span>01/27/2025</span>
-              </div>
-            </div>
+            </Link>
 
             <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4">
