@@ -2,20 +2,18 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
-interface PostPageProps {
-  params: {
-    slug: string;
-  };
-}
+type Props = {
+  params: { slug: string };
+};
 
-export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = params.slug;
   return {
     title: `${slug} - ZenBlog`,
   };
 }
 
-export default function PostPage({ params }: PostPageProps) {
+export default async function PostPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-white">
       {/* 页面头部区域 - 包含导航栏和主要操作按钮 */}
