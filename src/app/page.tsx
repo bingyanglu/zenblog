@@ -47,7 +47,7 @@ export default function Home() {
           <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-w-16 aspect-h-9 bg-gray-100 p-4">
               <pre className="text-sm font-mono overflow-hidden">
-                // Example code
+                {"// Example code"}
                 const nextEdit = predict();
               </pre>
             </div>
@@ -62,8 +62,8 @@ export default function Home() {
           <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-w-16 aspect-h-9 bg-gray-100 p-4">
               <pre className="text-sm font-mono overflow-hidden">
-                // Theme preview
-                theme.setColor("primary");
+                {"// Theme preview"}
+                theme.setColor(&quot;primary&quot;);
               </pre>
             </div>
             <div className="p-6">
@@ -77,7 +77,7 @@ export default function Home() {
           <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-w-16 aspect-h-9 bg-gray-100 p-4">
               <pre className="text-sm font-mono overflow-hidden">
-                // DeepSeek integration
+                {"// DeepSeek integration"}
                 ai.suggest(code);
               </pre>
             </div>
