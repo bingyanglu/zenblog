@@ -2,12 +2,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
-import { PageProps } from "next/types";
-
-type Props = PageProps<{
+type Props = {
   params: { slug: string };
-}>;
-
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = params.slug;
