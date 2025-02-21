@@ -2,18 +2,21 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
-type Props = {
-  params: { slug: string };
+type PageProps = {
+  params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.slug;
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
   return {
     title: `${slug} - ZenBlog`,
   };
 }
 
-export default async function PostPage({ params }: Props) {
+export default async function Page({ params }: PageProps) {
+  const resolvedParams = await params;
   return (
     <div className="min-h-screen bg-white">
       {/* 页面头部区域 - 包含导航栏和主要操作按钮 */}
@@ -75,7 +78,7 @@ export default async function PostPage({ params }: Props) {
           </div>
           <article>
             <header className="mb-8">
-              <h1 className="text-4xl font-bold mb-4">{params.slug}</h1>
+              <h1 className="text-4xl font-bold mb-4">{resolvedParams.slug}</h1>
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800" />
